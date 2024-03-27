@@ -23,9 +23,10 @@ from io import BytesIO
 import re
 import base64
 import pickle
+from dotenv import load_dotenv
 
-
-GOOGLE_API_KEY="AIzaSyAuhDMHPn0oNbKGlGUVzA5N0aAJkdkhM-E"
+load_dotenv()
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 genai.configure(api_key=GOOGLE_API_KEY)
 os.environ['GOOGLE_API_KEY']=GOOGLE_API_KEY
 
